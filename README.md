@@ -13,7 +13,7 @@ This repo contains the implementation of our paper:
 
 ![pipeline](./pic/papeline.png)
 
-**The code  will be released after out paper  is accepted!**
+**The code  will be released after our paper  is accepted!**
 
 
 
