@@ -1,0 +1,14 @@
+# Configuration for nuscenes multi-scan 
+# --------------------------------------------------------------------
+
+# data sequence
+seq: 1
+
+nuscence_config: './nuscenes_all.yaml'
+mos_nuscence_config: './nuscenes_all_mos.yaml'
+
+# dataset root folder
+
+dataset_root: '../data/nuScenes_kitti/train'
+
+
