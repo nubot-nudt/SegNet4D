@@ -11,7 +11,7 @@ This repo contains the implementation of our paper:
 
 <div align="center">
     <div align="center">
-        <img src="./pic/frame_work.png" width = 70% >
+        <img src="./pic/frame_work.jpeg" width = 60% >
     </div>
     <font color=#a0a0a0 size=2>SegNet4D is an efficient  Instance-Aware 4D LiDAR semantic segmentation framework. We first utilize the Motion Features Encoding Module to extract motion features from the sequential LiDAR scans. Following this, the motion features are concatenated with the spatial features of the current scan and fed into the Instance-Aware Feature Extraction Backbone. Then, two separate heads are applied: a motion head for predicting moving states, and a semantic head for predicting semantic category. Finally, the Motion-Semantic Fusion Module integrates the motion and semantic features to achieve 4D semantic segmentation.</font>
 </div>
