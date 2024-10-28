@@ -5,7 +5,7 @@ This repo contains the implementation of our paper:
 
 > **SegNet4D: Efficient Instance-Aware 4D LiDAR Semantic Segmentation for Driving Scenarios**
 >
-> [Neng Wang](https://github.com/neng-wang), Ruibin Guo, [Chenghao Shi](https://github.com/chenghao-shi), Hui Zhang, Huimin Lu, Zhiqiang Zheng, [Xieyuanli Chen](https://github.com/Chen-Xieyuanli)   
+> [Neng Wang](https://github.com/neng-wang), Ruibin Guo, [Chenghao Shi](https://github.com/chenghao-shi), Ziyue Wang, Hui Zhang, Huimin Lu, Zhiqiang Zheng, [Xieyuanli Chen](https://github.com/Chen-Xieyuanli)   
 
 ### Framework
 
