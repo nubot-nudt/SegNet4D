@@ -50,7 +50,7 @@ python utils/generate_boundingbox.py --data_path ./demo_data/ --view --lshape --
 
 Before running this, you need to install `open3d` and `PCL` in python environment.
 
-*You can download the bounding box from the [link]() directly.*
+*You can download the bounding box from the [link](https://1drv.ms/f/c/5f06ab4eccad8a4e/EjQece8-lVhMkJL5H8Qr6NMBZmlczYBwGMqwE_J-bNJFLA?e=qsi6r0) directly.*
 
 #### 2. nuScenes
 
