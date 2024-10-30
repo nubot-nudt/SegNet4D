@@ -30,6 +30,10 @@ Our accompanying video is now available on **OneDrive**.
 
 The code is tested on the environment with **ubuntu20.04**, **python3.7**, **cuda11.3**, **cudnn8.2.1**.
 
+*We have first released the code for generating bounding boxes from semantic annotations and  multi-scan nuScenes labels to facilitate the community's work. The implementation of SegNet4D will be made available after our paper is accepted.*
+
+
+
 ### Data
 
 We mainly train our model on the SemanticKITTI and nuScenes dataset.
@@ -56,7 +60,7 @@ Before running this, you need to install `open3d` and `PCL` in python environmen
 
 Download the raw dataset from the [website](https://www.nuscenes.org/).
 
-#### generating nuScenes multi-scan dataset
+##### generating nuScenes multi-scan dataset
 
 You can find detailed readme [here](./nuscenes_kits/README.md).
 
@@ -64,7 +68,7 @@ You can find detailed readme [here](./nuscenes_kits/README.md).
 
 ### Code usage
 
-- **coming soon...**
+- The code will be released after our paper has been accepted.
 
 
 
