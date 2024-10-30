@@ -46,7 +46,7 @@ python utils/generate_boundingbox.py --data_path ./demo_data/ --view --lshape --
 
 `--data_path`: data path  		`--view`: Visualizing the instance box
 
-`--lshape`: using the L-shap for refining the box   	 `--save`: saving the box in the `.npy` file
+`--lshape`: using the L-shap for refining the box   	 `--save`: saving the box in the `.npy` file.
 
 Before running this, you need to install `open3d` and `PCL` in python environment.
 
