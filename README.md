@@ -73,7 +73,7 @@ You can find detailed readme [here](./nuscenes_kits/README.md).
 
 ### Code usage
 
-- The code will be released after our paper has been accepted.
+- The code will be released after our paper is accepted.
 
 
 
