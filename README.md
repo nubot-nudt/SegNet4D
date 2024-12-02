@@ -1,6 +1,6 @@
 <div align="center">
 
-# SegNet4D: Efficient Instance-Aware 4D LiDAR Semantic Segmentation for Driving Scenarios
+# SegNet4D: Efficient Instance-Aware 4D  Semantic Segmentation for LiDAR Point Cloud
 
 [![](https://img.shields.io/badge/Page-SegNet4D-d6ccc2?style=flat-square&labelColor=495057&logoColor=white)](https://neng-wang.github.io/SegNet4D/) [![](https://img.shields.io/badge/Video-oneDrive-00b4d8?style=flat-square&labelColor=495057&logoColor=white)](https://onedrive.live.com/?redeem=aHR0cHM6Ly8xZHJ2Lm1zL2YvYy81ZjA2YWI0ZWNjYWQ4YTRlL0VqUWVjZTgtbFZoTWtKTDVIOFFyNk5NQlptbGN6WUJ3R01xd0VfSi1iTkpGTEE%5FZT1xc2k2cjA&cid=5F06AB4ECCAD8A4E&id=5F06AB4ECCAD8A4E%21sc3b620f34a6041b2a77e8d6d18d1968f&parId=5F06AB4ECCAD8A4E%21sef711e34953e4c589092f91fc42be8d3&o=OneUp) [![](https://img.shields.io/badge/Paper-arXiv-d62828?style=flat-square&labelColor=495057&logoColor=white)](https://arxiv.org/abs/2406.16279)
 
@@ -8,7 +8,7 @@
 
 This repo contains the implementation of our paper:
 
-> **SegNet4D: Efficient Instance-Aware 4D LiDAR Semantic Segmentation for Driving Scenarios**
+> **SegNet4D: Efficient Instance-Aware 4D  Semantic Segmentation for LiDAR Point Cloud**
 >
 > [Neng Wang](https://github.com/neng-wang), Ruibin Guo, [Chenghao Shi](https://github.com/chenghao-shi), Ziyue Wang, Hui Zhang, Huimin Lu, Zhiqiang Zheng, [Xieyuanli Chen](https://github.com/Chen-Xieyuanli)   
 
@@ -26,8 +26,9 @@ This repo contains the implementation of our paper:
 Our accompanying video is now available on **OneDrive**.
 
 <div align="center">
-    <a href="https://onedrive.live.com/?redeem=aHR0cHM6Ly8xZHJ2Lm1zL2YvYy81ZjA2YWI0ZWNjYWQ4YTRlL0VqUWVjZTgtbFZoTWtKTDVIOFFyNk5NQlptbGN6WUJ3R01xd0VfSi1iTkpGTEE%5FZT1xc2k2cjA&cid=5F06AB4ECCAD8A4E&id=5F06AB4ECCAD8A4E%21sc3b620f34a6041b2a77e8d6d18d1968f&parId=5F06AB4ECCAD8A4E%21sef711e34953e4c589092f91fc42be8d3&o=OneUp" target="_blank"><img src="./pic/video_cover.jpeg" width=65% /></a>
+    <a href="https://onedrive.live.com/?redeem=aHR0cHM6Ly8xZHJ2Lm1zL2YvYy81ZjA2YWI0ZWNjYWQ4YTRlL0VqUWVjZTgtbFZoTWtKTDVIOFFyNk5NQlptbGN6WUJ3R01xd0VfSi1iTkpGTEE%5FZT1xc2k2cjA&cid=5F06AB4ECCAD8A4E&id=5F06AB4ECCAD8A4E%21sc3b620f34a6041b2a77e8d6d18d1968f&parId=5F06AB4ECCAD8A4E%21sef711e34953e4c589092f91fc42be8d3&o=OneUp" target="_blank"><img src="./pic/video_cover.jpg" width=65% /></a>
 </div>
+
 
 
 
@@ -83,7 +84,7 @@ If you use our code in your work, please star our repo and cite our paper.
 
 ```bibtex
 @article{wang2024arxiv,
-	title={{SegNet4D: Efficient Instance-Aware 4D LiDAR Semantic Segmentation for Driving Scenarios}},
+	title={{SegNet4D: Efficient Instance-Aware 4D Semantic Segmentation for LiDAR Point Cloud}},
 	author={Wang, Neng and Guo, Ruibin and Shi, Ziyue Wang, Chenghao and Zhang, Hui and Lu, Huimin and Zheng, Zhiqiang and Chen, Xieyuanli},
 	journal={arXiv preprint},
 	year={2024}
