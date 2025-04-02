@@ -1,0 +1,246 @@
+labels:
+  0: 'noise'
+  1: 'animal'
+  2: 'human.pedestrian.adult'
+  3: 'human.pedestrian.child'
+  4: 'human.pedestrian.construction_worker'
+  5: 'human.pedestrian.personal_mobility'
+  6: 'human.pedestrian.police_officer'
+  7: 'human.pedestrian.stroller'
+  8: 'human.pedestrian.wheelchair'
+  9: 'movable_object.barrier'
+  10: 'movable_object.debris'
+  11: 'movable_object.pushable_pullable'
+  12: 'movable_object.trafficcone'
+  13: 'static_object.bicycle_rack'
+  14: 'vehicle.bicycle'
+  15: 'vehicle.bus.bendy'
+  16: 'vehicle.bus.rigid'
+  17: 'vehicle.car'
+  18: 'vehicle.construction'
+  19: 'vehicle.emergency.ambulance'
+  20: 'vehicle.emergency.police'
+  21: 'vehicle.motorcycle'
+  22: 'vehicle.trailer'
+  23: 'vehicle.truck'
+  24: 'flat.driveable_surface'
+  25: 'flat.other'
+  26: 'flat.sidewalk'
+  27: 'flat.terrain'
+  28: 'static.manmade'
+  29: 'static.other'
+  30: 'static.vegetation'
+  31: 'vehicle.ego'
+  # moving
+  32: 'moving.car'
+  33: 'moving.bus'
+  34: 'moving.truck'
+  35: 'moving.construction'
+  36: 'moving.trailer'
+  37: 'moving.motorcyclist'
+  38: 'moving.cyclist'
+  39: 'moving.pedestrian'
+color_map: # bgr
+color_map: # bgr
+  0: [255, 255, 255]
+  1: [150, 240, 255]
+  4: [245, 150, 100]
+  2: [245, 230, 100]
+  3: [250, 80, 100]
+  6: [150, 60, 30]
+  5: [90, 30, 150]
+  10: [180, 30, 80]
+  8: [0, 0, 255]
+  9: [255, 0, 0]
+  7: [30, 30, 255]
+  23: [200, 40, 255] # [200, 40, 255]
+  22: [90, 30, 150]
+  11: [255, 0, 255]
+  14: [80, 240, 150]
+  16: [0, 175, 0]
+  15: [0, 200, 255]
+  13: [75, 0, 75]
+  12: [75, 0, 175]
+  17: [100, 100, 255]  # [245, 150, 100]
+  24: [30, 30, 255]
+  18: [250, 80, 100]
+  19: [180, 30, 80]
+  21: [255, 0, 0]
+  20: [90, 30, 150]
+labels_16:
+  0: 'noise'
+  1: 'barrier'
+  2: 'bicycle'
+  3: 'bus'
+  4: 'car'
+  5: 'construction_vehicle'
+  6: 'motorcycle'
+  7: 'pedestrian'
+  8: 'traffic_cone'
+  9: 'trailer'
+  10: 'truck'
+  11: 'driveable_surface'
+  12: 'other_flat'
+  13: 'sidewalk'
+  14: 'terrain'
+  15: 'manmade'
+  16: 'vegetation'
+  17: 'moving_car'
+  18: 'moving_bus'
+  19: 'moving_truck'
+  20: 'moving_construction'
+  21: 'moving_trailer'
+  22: 'moving_motorcyclist'
+  23: 'moving_cyclist'
+  24: 'moving_pedestrian'
+
+learning_map:
+  1: 0
+  5: 0
+  7: 0
+  8: 0
+  10: 0
+  11: 0
+  13: 0
+  19: 0
+  20: 0
+  0: 0
+  29: 0
+  31: 0
+  9: 1
+  14: 2
+  15: 3
+  16: 3
+  17: 4
+  18: 5
+  21: 6
+  2: 7
+  3: 7
+  4: 7
+  6: 7
+  12: 8
+  22: 9
+  23: 10
+  24: 11
+  25: 12
+  26: 13
+  27: 14
+  28: 15
+  30: 16
+  # moving
+  32: 17 # 'moving_car'
+  33: 18 # 'moving_bus'
+  34: 19 # 'moving_truck'
+  35: 20 # 'moving_construction'
+  36: 21 # 'moving_trailer'
+  37: 22 # 'moving_motorcyclist'
+  38: 23 # 'moving_cyclist'
+  39: 24 # 'moving_pedestrian'
+
+learning_map_inv:
+  0: 0
+  1: 9
+  2: 14
+  3: 15
+  4: 17
+  5: 18
+  6: 21
+  7: 2
+  8: 12
+  9: 22
+  10: 23
+  11: 24
+  12: 25
+  13: 26
+  14: 27
+  15: 28
+  16: 30
+  # moving
+  17: 32
+  18: 33
+  19: 34
+  20: 35
+  21: 36
+  22: 37
+  23: 38
+  24: 39
+
+learning_moving_map_inv: # inverse of previous map
+  0: 0
+  1: 1
+  2: 2
+  3: 3
+  4: 4
+  5: 5
+  6: 6
+  7: 7
+  8: 8
+  9: 9
+  10: 10
+  11: 11
+  12: 12
+  13: 13
+  14: 14
+  15: 15
+  16: 16
+  # moving
+  17: 4  # 'moving_car'
+  18: 3  # 'moving_bus'
+  19: 10  # 'moving_truck'
+  20: 5  # 'moving_construction'
+  21: 9  # 'moving_trailer'
+  22: 6  # 'moving_motorcyclist'
+  23: 2  # 'moving_cyclist'
+  24: 7  # 'moving_pedestrian'
+name2labels16:
+  'noise': 255
+  'barrier': 0
+  'bicycle': 1
+  'bus': 2
+  'car': 3
+  'construction_vehicle': 4
+  'motorcycle': 5
+  'pedestrian': 6
+  'traffic_cone': 7
+  'trailer': 8
+  'truck': 9
+  'driveable_surface': 10
+  'other_flat': 11
+  'sidewalk': 12
+  'terrain': 13
+  'manmade': 14
+  'vegetation': 15
+  'moving_car': 16
+  'moving_bus': 17
+  'moving_truck': 18
+  'moving_construction': 19
+  'moving_trailer': 20
+  'moving_motorcyclist': 21
+  'moving_cyclist': 22
+  'moving_pedestrain': 23
+learning_ignore: # Ignore classes
+  0: True      # 
+  1: False     # 
+  2: False     # 
+  3: False     # 
+  4: False     # 
+  5: False     # 
+  6: False     # 
+  7: False     # 
+  8: False     # 
+  9: False     # 
+  10: False    # 
+  11: False    # 
+  12: False    # 
+  13: False    # 
+  14: False    # 
+  15: False    # 
+  16: False    # 
+  17: False    # 
+  18: False    # 
+  19: False    # 
+  20: False    # 
+  21: False    #
+  22: False    # 
+  23: False    # 
+  24: False    #

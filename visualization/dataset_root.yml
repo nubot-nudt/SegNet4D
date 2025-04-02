@@ -1,0 +1,14 @@
+# Configuration for dataset root 
+# --------------------------------------------------------------------
+
+# data sequence
+seq: 1072
+
+# dataset_root: '../demo_data/nuScenes_kitti/val'
+dataset_root: '/home/wangneng/DataFast/nuScences_kitti/val'
+
+prediction_mos_root: '../preb_out/SegNet4D/mos_preb'
+prediction_4d_root: '../preb_out/SegNet4D/multi_semantic_preb'
+
+nuscence_all_config: '../config/nuscenes/nuscenes_all.yaml'
+nuscence_mos_config: '../config/nuscenes/nuscenes_all_mos.yaml'

@@ -1,0 +1,132 @@
+EXPERIMENT:
+  ID: SegNet4D # Give your logs and model a unique name
+
+##Data
+DATA:
+  POINT_CLOUD_RANGE: [-60, -50, -4, 60, 50, 2] 
+  CLASE_NAME: ['Car', 'Pedestrian', 'Cyclist']
+  TRANSFORM: True # If true, the points are pose-aligned before feeding to the model
+  SHUFFLE: True # 
+  POSES: "poses.txt" # Name of the pose file provided in each sequence folder
+  NUM_WORKER: 8
+  DELTA_T_DATA: 0.1 # Time between scans in the dataset (0.1s for KITTI)
+  VOXEL_SIZE: [0.1, 0.1, 0.1] 
+  GRID_SIZE_BEV: 0.1
+  SEMANTIC_MOS_CONFIG_FILE: "./config/semantickitti/semantic-kitti-mos.yaml"
+  SEMANTIC_CONFIG_FILE: "./config/semantickitti/semantic-kitti.yaml"
+  SEMANTIC_CONFIG_FILE_ALL: "./config/semantickitti/semantic-kitti-all.yaml"
+  ONLINE_TRAIN: False # If true, the bev image is calculated online during training
+  
+  SPLIT:
+    TRAIN:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 9
+      - 10
+    VAL:
+      - 8
+    TEST:
+      - 8
+      # - 11
+      # - 12
+      # - 13
+      # - 14
+      # - 15
+      # - 16
+      # - 17
+      # - 18
+      # - 19
+      # - 20
+      # - 21
+ 
+##Training
+TRAIN:
+  MAX_EPOCH: 80
+  LR: 0.0001
+  LR_EPOCH: 1
+  LR_DECAY: 0.99
+  WEIGHT_DECAY: 0.0001
+  BATCH_SIZE: 8
+  ACC_BATCHES: 1
+
+  SEG_NUM_PER_SEMANTIC_CLASS: [55437630, 320797, 541736, 2578735, 3274484, 552662, 184064, 78858, 240942562, 17294618, 170599734, 6369672, 230413074, 101130274, 476491114, 9833174, 129609852, 4506626, 1168181]
+  SEG_NUM_PER_SEMANTIC_CLASS_ALL: [95302518, 391766, 936031, 4347360, 5086370, 440239, 298599, 87766, 467085589, 34577789, 338183720, 9173976, 
+                                    311802516, 170001681, 627195745, 14189414, 183603141, 6712285, 1441988,
+                                      4128968, 298599, 376574, 87766, 369518, 238730]
+
+
+DATA_AUGMENTOR:
+  WORLD_ROT_ANGLE:  [-0.78539816, 0.78539816] # random_world_rotation
+  WORLD_SCALE_RANGE: [0.95, 1.05] # random_world_scaling
+
+
+##Network
+MODEL:
+  DELTA_T_PREDICTION: 0.1 # Temporal resolution of scans
+  N_PAST_STEPS: 2 # the number of input LiDAR scans
+  POINT_FEATURE_ENCODING: {
+    encoding_type: absolute_coordinates_encoding,
+    used_feature_list: ['x', 'y', 'z', 'intensity'],
+    src_feature_list: ['x', 'y', 'z', 'intensity'],
+  }
+  VFE:
+      NAME: MeanVFE
+
+  BACKBONE_3D:
+      NAME: VoxelBackBone8x
+
+  MAP_TO_BEV:
+      NAME: HeightCompression
+      NUM_BEV_FEATURES: 384   
+
+  BACKBONE_2D:
+      NAME: BaseBEVBackbone
+
+      LAYER_NUMS: [5]
+      LAYER_STRIDES: [1]
+      NUM_FILTERS: [128]
+      UPSAMPLE_STRIDES: [2]
+      NUM_UPSAMPLE_FILTERS: [256]
+
+  DENSE_HEAD:
+      NAME: CenterHead
+      CLASS_AGNOSTIC: False
+      CLASE_NAME: ['Car', 'Pedestrian', 'Cyclist']
+      NUM_CLASS: 3
+      
+      USE_DIRECTION_CLASSIFIER: False 
+
+      TARGET_ASSIGNER_CONFIG:
+          MAX_OBJS: 100
+          VOXEL_SIZE: [0.1, 0.1, 0.1]
+          OUT_SIZE_FACTOR: 4
+          GAUSSIAN_OVERLAP: 0.1
+          MIN_RADIUS: 2
+          BOX_CODER: ResidualCoder
+          
+      LOSS_CONFIG:
+          LOSS_WEIGHTS: {
+              'cls_weight': 1.0,
+              'loc_weight': 2.0,
+              'code_weights': [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+          }
+
+  POST_PROCESSING:
+      RECALL_THRESH_LIST: [0.3, 0.5, 0.7]
+      SCORE_THRESH: 0.1
+      OUTPUT_RAW_SCORE: False
+
+      EVAL_METRIC: kitti
+
+      NMS_CONFIG:
+          MULTI_CLASSES_NMS: False
+          NMS_TYPE: nms_gpu
+          NMS_THRESH: 0.01
+          NMS_PRE_MAXSIZE: 4096
+          NMS_POST_MAXSIZE: 500
