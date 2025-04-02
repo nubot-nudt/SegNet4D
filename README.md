@@ -66,7 +66,8 @@ Before running this, you need to install `open3d` and `PCL` in python environmen
 
 <details>
     <summary><strong>Data structure</strong></summary>
-```bash
+
+```
 └── sequences
   ├── 00/           
   │   ├── velodyne/	
