@@ -6,7 +6,7 @@
 
 </div>
 
-**This repo contains the implementation of our SegNet4D, which is an extension of our conference paper, i.e., [InsMOS](https://github.com/nubot-nudt/InsMOS).  ** SegNet4D is a new LiDAR-only SOTA method for 4D semantic segmentation with public paper (as of October 2024).
+**This repo contains the implementation of our SegNet4D, which is an extension of our conference paper, i.e., [InsMOS](https://github.com/nubot-nudt/InsMOS).**  SegNet4D is a new LiDAR-only SOTA method for 4D semantic segmentation with public paper (as of October 2024).
 
 > **SegNet4D: Efficient Instance-Aware 4D  Semantic Segmentation for LiDAR Point Cloud**
 >
