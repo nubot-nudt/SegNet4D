@@ -16,7 +16,9 @@
 
 ## News:
 
-- [2025-04] code released. 
+- [2025-05] Our paper is accepted by T-ASE.
+
+- [2025-04] Code released. 
 
 - [2024-11] Paper is available in arXiv website.
 
