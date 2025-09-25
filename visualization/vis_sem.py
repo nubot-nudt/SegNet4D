@@ -35,10 +35,12 @@ def load_files(folder):
   return file_paths
 
 def load_labels(label_path):
-  label = np.fromfile(label_path, dtype=np.uint8, count=-1).reshape([-1])
+  label = np.fromfile(label_path, dtype=np.uint32)
   label = label.reshape((-1))
+  # print("label:",label.shape)
+  sem_label = label & 0xFFFF  # semantic label in lower half
   
-  return label
+  return sem_label
 
 def load_vertex(scan_path):
   """ Load 3D points of a scan. The fileformat is the .bin format used in

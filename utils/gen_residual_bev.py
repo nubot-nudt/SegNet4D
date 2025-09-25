@@ -14,7 +14,6 @@ from tqdm import tqdm
 from icecream import ic
 import time 
 import sys
-sys.path.append("/home/wangneng/code/InsMOS_bev/utils/src/build")
 import Array_Index
 
 def load_poses(pose_path):
