@@ -228,11 +228,11 @@ If you use our code in your work, please star our repo and cite our paper.
 ```
 
 ```bibtex
-@article{wang2024arxiv,
+@article{wang2025tase,
 	title={{SegNet4D: Efficient Instance-Aware 4D Semantic Segmentation for LiDAR Point Cloud}},
 	author={Wang, Neng and Guo, Ruibin and Shi, Ziyue Wang, Chenghao and Zhang, Hui and Lu, Huimin and Zheng, Zhiqiang and Chen, Xieyuanli},
-	journal={arXiv preprint},
-	year={2024}
+	journal={IEEE Transactions on Automation Science and Engineering},
+	year={2025}
 }
 ```
 
