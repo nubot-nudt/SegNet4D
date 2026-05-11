@@ -181,7 +181,7 @@ You can download our ckpt from this [link](https://drive.google.com/drive/folder
 
 ```bash
 # demo data
-python scripts/predict_nuscenes.py --cfg_file config/nuscenes/nuscenes_config.yaml --data_path /demo_data/nuScenes_kitti/ --ckpt ./ckpt/nuscenes.ckpt --split demo
+python scripts/predict_nuscenes.py --cfg_file config/nuscenes/nuscenes_config.yaml --data_path ./demo_data/nuScenes_kitti/ --ckpt ./ckpt/nuscenes.ckpt --split demo
 
 # nuscenes
 python scripts/predict_nuscenes.py --cfg_file config/nuscenes/nuscenes_config.yaml --data_path /home/wangneng/DataFast/nuScences_kitti --ckpt ./ckpt/nuscenes.ckpt
